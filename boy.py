@@ -32,7 +32,10 @@ class AutoRun:
         self.boy = boy
 
     def enter(self, e):
-        self.boy.dir = 1
+        if self.boy.face_dir == 1:
+            self.boy.dir = 1
+        else:
+            self.boy.dir = -1
         self.boy.wait_start_time = get_time()
 
 
